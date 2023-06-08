@@ -150,7 +150,7 @@ LISTA add_pos(LISTA l, int pos, int elem){
         else{
             //mover todos los numeros que esten despues de pos hacia la derecha
             for (r = q; r >= pos; r--){
-                l.punt=l.punt+1;
+                l.sig[pos]=l.sig[pos+1];
             }
                 l.dato[pos] = elem;
             }
