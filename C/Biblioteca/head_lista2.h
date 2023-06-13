@@ -17,8 +17,10 @@ BOOLEAN lista_llena(LISTA *l);
 int largo_lista(LISTA *l);
 int buscar_mem(LISTA *l);
 void add_final(LISTA *l, int elem);
+void add_pos(LISTA *l, int pos, int elem);
 void add_inicio(LISTA *l, int elem);
 void del_final(LISTA *l);
+void del_pos(LISTA *l, int pos);
 void del_inicio(LISTA *l);
 void muestra (LISTA *l);
 void largo(LISTA *l);
@@ -125,6 +127,46 @@ void add_inicio(LISTA *l, int elem){
         }
     }
 }
+
+void add_pos(LISTA *l, int pos, int elem){
+    int q,r;
+    if (lista_llena(l) == TRUE){
+        printf("<< Lista Llena >>\n");
+    }
+    else{
+        q = buscar_mem(l);
+        if (pos > N){
+            printf("Out of range");
+        }
+        else{
+            //usar ciclo iterativo
+            for (r = q; r == pos; r--){
+                    l->punt = q;
+                }
+                    l->sig[r] = l->punt;
+                    //agrega el dato
+                    l->dato[pos] = elem;
+        }
+    }
+}
+
+void del_pos(LISTA *l, int pos){
+    int q,r;
+    if (lista_vacia(l) == FALSE){
+        for (r = q; r == pos; r--){
+                l->punt = q;
+        }
+        l->sig[q] = l->punt;
+        //elimina el dato
+        l->dato[pos] = NULO;
+    }
+    else{
+        printf("<<Lista Vacia>>");
+    }
+
+}
+
+
 
 void del_final(LISTA *l){
     int p, q;
