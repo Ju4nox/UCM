@@ -20,54 +20,26 @@ if __name__ == "__main__":
             #print(set(sudoku[j]), set([1,2,3,4,5,6,7,8,9]))
         else:
             print("Se repite algún numero")
-#verifica las primeras 3 filas    
+#verifica las primeras 3 filas
+#crear una variable para hacer un bucle y que repita el mismo proceso 3 veces
+    a = 0
+#creacion del bucle
+    while a < 3:
 #crear una lista 
-    lista = []
+        lista = []
 #recorrer la sublista
-    for i in range(9):
+        for i in range(9):
 #recorrer los numeros dentro de las listas
-        for j in range(3):
+            for j in range(3):
 #almacenar los numeros dentro de la lista
-            if len(lista) < 9:
-                lista.append(sudoku[i][j])
+                if len(lista) < 9:
+                    lista.append(sudoku[i][j+a*3])
 #si es que la lista está llena entonces hay que saber si es igual al set
-                if set(lista) == set([1,2,3,4,5,6,7,8,9]):
-                    print("La fila no repite ningún numero")
-                    #print(lista)
-                    lista.clear()
-                    
-    #print(lista)
-#verifica las siguienes 3 filas
-#crear una lista 
-    lista_two = []
-#recorrer la sublista
-    for i in range(9):
-#recorrer los numeros dentro de las listas
-        for j in range(3):
-#almacenar los numeros dentro de la lista
-            if len(lista_two) < 9:
-                lista_two.append(sudoku[i][j+3])
-#si es que la lista está llena entonces hay que saber si es igual al set
-                if set(lista_two) == set([1,2,3,4,5,6,7,8,9]):
-                    print("La fila no repite ningún numero")
-                    #print(lista_two)
-                    lista_two.clear()
-#verifica las últimas 3 filas
-#crear una lista 
-    lista_three = []
-#recorrer la sublista
-    for i in range(9):
-#recorrer los numeros dentro de las listas
-        for j in range(3):
-#almacenar los numeros dentro de la lista
-            if len(lista_three) < 9:
-                lista_three.append(sudoku[i][j+6])
-#si es que la lista está llena entonces hay que saber si es igual al set
-                if set(lista_three) == set([1,2,3,4,5,6,7,8,9]):
-                    print("La fila no repite ningún numero")
-                    #print(lista_three)
-                    lista_three.clear()
-                    
+                    if set(lista) == set([1,2,3,4,5,6,7,8,9]):
+                        print("La fila no repite ningún numero")
+                        #print(lista)
+                        lista.clear()
+        a+=1
     #crear una lista
     list_c_one = []
     #recorrer la sublista
