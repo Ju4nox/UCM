@@ -1,5 +1,5 @@
 # UCM
 
-GRANDE PELAO SAITAMA \n
-códigos qlos que hago pa no quearme añejo en la U \n
+GRANDE PELAO SAITAMA 
+códigos qlos que hago pa no quearme añejo en la U 
 wena cabros chupenme el dick
