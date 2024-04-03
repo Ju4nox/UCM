@@ -2,4 +2,4 @@
 
 GRANDE PELAO SAITAMA   
 códigos qlos que hago pa no quearme añejo en la U    
-wena cabros chupenme el dick
+wena cabros suckeenme el dick
