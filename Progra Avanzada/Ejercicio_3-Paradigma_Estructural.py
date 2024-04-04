@@ -18,9 +18,10 @@ if __name__ == "__main__":
             #muestra en pantalla si se repite algún numero en alguna de las subcuadriculas del sudoku, especificando de izquierda a derecha en cuales
             print("No se repite ningun numero en la cuadricula")
             #print(set(sudoku[j]), set([1,2,3,4,5,6,7,8,9]))
+            pass
         else:
             print("Se repite algún numero")
-#verifica las primeras 3 filas
+
 #crear una variable para hacer un bucle y que repita el mismo proceso 3 veces
     a = 0
 #creacion del bucle
@@ -40,10 +41,42 @@ if __name__ == "__main__":
                         #print(lista)
                         lista.clear()
         a+=1
-    #crear una lista
-    list_c_one = []
-    #recorrer la sublista
+
+    b = 0
+    while b < 3:
+        lista_c_o = []
+        for i in range(0,9,3):
+            for j in range(0,7,3):
+                if len(lista_c_o) < 9:
+                    lista_c_o.append(sudoku[i][j+b])
+                    #print(lista_c_o)
+                    if set(lista_c_o) == set([1,2,3,4,5,6,7,8,9]):
+                        print("No se repite ningun numero en la columna")
+                        lista_c_o.clear()      
+        b+=1
+    c = 0
+    while c < 3:
+        lista_c_t = []
+        for i in range(0,9,3):
+            for j in range(0,7,3):
+                if len(lista_c_t) < 9:
+                    lista_c_t.append(sudoku[i+1][j+c])
+                    #print(lista_c_t)
+                    if set(lista_c_t) == set([1,2,3,4,5,6,7,8,9]):
+                        print("No se repite ningun numero en la columna")
+                        lista_c_t.clear() 
+        c+=1
     
-   #recorrer los elementos
-    
-   #agregar a la lista los primeros elementos de cada sublista
+    d = 0
+    while d < 3:
+        lista_c_t = []
+        for i in range(0,9,3):
+            for j in range(0,7,3):
+                if len(lista_c_t) < 9:
+                    lista_c_t.append(sudoku[i+2][j+d])
+                    #print(lista_c_t)
+                    if set(lista_c_t) == set([1,2,3,4,5,6,7,8,9]):
+                        print("No se repite ningun numero en la columna")
+                        lista_c_t.clear()                  
+        d+=1
+        
