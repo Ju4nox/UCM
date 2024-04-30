@@ -1,4 +1,4 @@
-a = int(input("Ingrese el descuento (no debe ser mayor a 50%)"))
+variable = int(input("Ingrese el descuento (no debe ser mayor a 50%)"))
 total = 0
 if a > 50:
     print("Debe ingresar un descuento menor")
