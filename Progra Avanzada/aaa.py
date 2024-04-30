@@ -6,3 +6,6 @@ else:
     descuento = a / 100
 for i in Carrito_compra:
     total += Carrito_compra[i][2]
+    
+descuento_aplicado = total*descuento
+resultado = total-descuento_aplicado
