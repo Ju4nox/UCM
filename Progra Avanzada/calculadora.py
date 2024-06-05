@@ -22,11 +22,42 @@ class Calculadora:
         return self.resultado
 
 
-a = int(input("Ingrese un numero: "))
-b = int(input("Ingrese otro numero: "))
+while True:
+    print("1) Sumar")
+    print("2) Restar")    
+    print("3) Multiplicar")
+    print("4) Dividir")
+    print("5) Salir")
+    opcion = input("Ingrese una opción:" )
+    
+    if opcion == "1":
+        a = int(input("Ingrese un número: "))
+        b = int(input("Ingrese un número: "))
+        ejemplo = Calculadora(a, b)
+        print(f"El resultado es: {ejemplo.sumar()}")
 
-ejemplo = Calculadora(a, b)
-print(ejemplo.sumar())
+    elif opcion == "2":
+        a = int(input("Ingrese un número: "))
+        b = int(input("Ingrese un número: "))
+        ejemplo = Calculadora(a, b)
+        print(ejemplo.restar())
+    elif opcion == "3":
+        a = int(input("Ingrese un número: "))
+        b = int(input("Ingrese un número: "))
+        ejemplo = Calculadora(a, b)
+        print(ejemplo.multiplicar())
+
+    elif opcion == "4":
+        a = int(input("Ingrese un número: "))
+        b = int(input("Ingrese un número: "))
+        ejemplo = Calculadora(a, b)
+        print(ejemplo.dividir())
+
+    elif opcion == "5":
+        break
+
+    else:
+        print("Opción no válida, por favor seleccione alguna")
 
 
 # otra forma
