@@ -55,23 +55,23 @@ def creacuenta():
 
 
 def deposita():
-    numero = input("Ingrese el numero de cuenta")
+    numero = input("Ingrese el numero de cuenta: ")
     for cuenta in lista:
         if numero == cuenta.numerocuenta:
-            cantidad = int(input("Ingrese la cantidad que desea depositar"))
+            cantidad = int(input("Ingrese la cantidad que desea depositar: "))
             cuenta.depositar(cantidad)
 
 
 def retira():
-    numero = input("Ingrese el numero de cuenta")
+    numero = input("Ingrese el numero de cuenta: ")
     for cuenta in lista:
         if numero == cuenta.numerocuenta:
-            cantidadr = int(input("Ingrese la cantidad que desea retirar"))
+            cantidadr = int(input("Ingrese la cantidad que desea retirar: "))
             cuenta.retirar(cantidadr)
 
 
 def muestraSaldo():
-    numero = input("Ingrese numero de cuenta")
+    numero = input("Ingrese numero de cuenta: ")
     for cuenta in lista:
         if numero == cuenta.numerocuenta:
             cuenta.impsSaldo()
