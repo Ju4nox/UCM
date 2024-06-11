@@ -1,5 +1,5 @@
 lista = []
-
+#le copié caleta al profe, menos mal pensabamos parecido al menos en lo más básico *carita lengua dinero
 
 class CuentaBancaria:
     # funcion constructora
