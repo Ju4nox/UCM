@@ -1,29 +1,13 @@
+
 lista = []
-#le copié caleta al profe, menos mal pensabamos parecido al menos en lo más básico *carita lengua dinero
 
 class CuentaBancaria:
     # funcion constructora
-    def __init__(self, titular, numeroCuenta, saldo):
+    def __init__(self, titular, numeroCuenta,tipoCuenta, saldo):
         self.numerocuenta = numeroCuenta
         self.titular = titular
         self.saldo = saldo
-
-    # hacer depositos
-    def depositar(self, valor):
-        self.saldo = self.saldo + valor
-        print(
-            f"Se ha depositado la cantidad de {valor} y el nuevo saldo es {self.saldo}"
-        )
-
-    # hacer retiros
-    def retirar(self, valor):
-        if valor > self.saldo:
-            print("Saldo insuficiente")
-        elif self.saldo == 0:
-            print("No dispone de saldo suficiente")
-        else:
-            self.saldo = self.saldo - valor
-            print(f"Se ha retirado {valor} su nuevo saldo es {self.saldo}")
+        self.tipoCuenta = tipoCuenta
 
     # imprimir el saldo
     def impsSaldo(self):
@@ -36,6 +20,54 @@ class CuentaBancaria:
         )
 
 
+class CuentaCorriente(CuentaBancaria):
+    def __init__(self, titular, numeroCuenta, tipoCuenta, saldo):
+        super().__init__(titular, numeroCuenta, "C", saldo)
+        #self.tipoCuenta = tipoCuenta
+
+    def depositar(self,valor):
+        #depositar saldo
+        self.saldo = self.saldo + valor
+
+    def retirar(self,valor):
+        #retira el saldo con una comision de 50 pesos
+        self.saldo = self.saldo - valor - 50
+        
+    def impsSaldo(self):
+        f"El tipo de cuenta es: {self.tipoCuenta}"
+        return super().impsSaldo()
+    
+    def impLista(self):
+        return super().impLista()
+
+    
+class CuentaAhorro(CuentaBancaria):
+    def __init__(self, titular, numeroCuenta, tipoCuenta, saldo):
+        super().__init__(titular, numeroCuenta, "A", saldo)
+        #self.tipoCuenta = tipoCuenta
+
+    #creemos el método
+    def depositar(self, valor):
+        #al depositar se suma al total un 0,1%
+        self.saldo = self.saldo + valor * 0.01 
+        f"el nuevo saldo es {self.saldo}"
+
+    def retirar(self, valor):
+        #solo puede retirar montos de 10000
+        if valor > 10000:
+            print("No puede retirar más de 10000 por favor reduzca la cantidad")
+        else:
+            self.saldo = self.saldo - valor
+    
+    def impLista(self):
+        f"El tipo de cuenta es: {self.tipoCuenta}"
+        return super().impLista()
+    
+    def impsSaldo(self):
+        return super().impsSaldo()
+    
+
+
 def imprimirmenu():
     print("MENU")
     print("1) Crear cuenta")
@@ -46,12 +78,17 @@ def imprimirmenu():
     print("6) Salir")
 
 
-def creacuenta():
+def crearcuenta():
     numero = input("Ingrese el numero de cuenta: ")
     duenho = input("Ingrese el nombre del dueño: ")
     saldo = int(input("Ingrese el saldo: "))
-    cuenta = CuentaBancaria(duenho, numero, saldo)
-    lista.append(cuenta)
+    print("Ingrese 'A' para cuenta de ahorro y 'C' para cuenta Corriente")
+    cuenta = input("Ingrese si es cuenta corriente o ahorro: ")
+    if cuenta == 'A':
+        creaCuenta = CuentaAhorro(duenho,numero,cuenta,saldo)
+    elif cuenta == 'C':
+        creaCuenta = CuentaCorriente(duenho,numero,cuenta,saldo)
+    lista.append(creaCuenta)
 
 
 def deposita():
@@ -87,7 +124,7 @@ def main():
         imprimirmenu()
         opcion = input()
         if opcion == "1":
-            creacuenta()
+            crearcuenta()
         elif opcion == "2":
             deposita()
         elif opcion == "3":
@@ -102,3 +139,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
