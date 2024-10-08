@@ -53,7 +53,7 @@ org 100h
     
     add cx,ax
     mov bx, 6
-    add cx,bx
+    sub cx,bx
 
 ret
 
