@@ -104,5 +104,7 @@ org 100h
 
 
 
-
+;arregla el error que no muestra en pantalla cuando el numero tiene dos digitos
+;dependiendo de como lo arregles puedes crear otra etiqueta que muestre los dos digitos en pantalla y que pregunte si vuelve a las opciones o no
+;caso contrario es que se quede en la misma etiqueta y ahi pregunte si vuelve o no a las opciones
 
