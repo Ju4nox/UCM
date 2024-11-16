@@ -1,4 +1,3 @@
-
 ; You may customize this and other start-up templates; 
 ; The location of this template is c:\emu8086\inc\0_com_template.txt
 
@@ -61,6 +60,8 @@ org 100h
         ;comparar bx con las opciones y hacer saltos
         cmp bl,1
         je sumar
+        cmp bl,2
+        je restar
         cmp bl,5
         je terminar
     loop men
@@ -90,6 +91,45 @@ org 100h
         mov var2, dx
         ;sumarlos
         add bl,dl
+        ;muestra en pantalla "El resultado es:"
+        mov dx, offset resulta
+        mov ah, 9h
+        int 21h
+        ;resultado queda en bx y lo muestra
+        mov dx,bx
+        add dx,48
+        mov ah,2
+        int 21h 
+        mov cx,1
+        cmp dx,10
+        jge muestra
+        
+        
+        
+     restar:;muestra para seleccionar un numero
+        mov dx, offset ing
+        mov ah, 9h
+        int 21h
+        ;lee el input
+        mov ah,01
+        int 21h
+        ;almacenar el numero leido
+        mov bl, al
+        sub bl, 30h
+        mov var1, bx
+        ;muestra para seleccionar un numero
+        mov dx, offset ing
+        mov ah, 9h
+        int 21h
+        ;lee el input
+        mov ah,01
+        int 21h
+        ;almacenar el numero leido
+        mov dl, al
+        sub dl, 30h
+        mov var2, dx
+        ;restarlos
+        sub bl,dl
         ;muestra para seleccionar una opcion
         mov dx, offset resulta
         mov ah, 9h
@@ -99,6 +139,37 @@ org 100h
         add dx,48
         mov ah,2
         int 21h
+        
+        
+        muestra:
+            ;resultado queda en bx y lo muestra
+            int 21h
+            loop muestra
+        
+        add cx,1    
+        opciones:
+            inc cx 
+            ;muestra para seleccionar una opcion
+            mov dx, offset opcion
+            mov ah, 9h
+            int 21h
+            ;lee el input
+            mov ah,01
+            int 21h
+            ;almacena
+            mov bl, al
+            sub bl, 30h
+            cmp bl,1
+            je sumar
+            cmp bl,2
+            je restar
+            cmp bl,5
+            je terminar
+            loop opciones
+            
+        
+        
+        
     terminar:
         hlt        
 
@@ -107,4 +178,5 @@ org 100h
 ;arregla el error que no muestra en pantalla cuando el numero tiene dos digitos
 ;dependiendo de como lo arregles puedes crear otra etiqueta que muestre los dos digitos en pantalla y que pregunte si vuelve a las opciones o no
 ;caso contrario es que se quede en la misma etiqueta y ahi pregunte si vuelve o no a las opciones
+
 
