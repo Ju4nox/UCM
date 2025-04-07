@@ -1,5 +1,6 @@
 import pandas as pd
 from collections import defaultdict
+import time
 
 def abrepelis():
     file = pd.read_csv("movies.csv", sep=",")
@@ -86,4 +87,8 @@ def main():
     mostrar_recomendaciones(user_id, rec_popularidad, dic_peliculas, "Recomendación por Popularidad")
 
 if __name__ == "__main__":
+    start_time = time.time()
     main()
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print(f"El tiempo de ejecución es: {execution_time:.6f} segundos")
