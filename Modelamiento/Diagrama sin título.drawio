@@ -205,6 +205,9 @@
         <mxCell id="eQmwyzFiXlrQ7T_pg-14-5" value="Se elimina la relación de compra&amp;nbsp;&lt;div&gt;ya que el cliente no tiene relación directa con el pedido&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
           <mxGeometry x="-400" y="-40" width="290" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="eQmwyzFiXlrQ7T_pg-14-6" value="Se elimina cantidad de articulos&lt;div&gt;porque la fabrica es la encargada de la cantidad&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="-290" width="260" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
