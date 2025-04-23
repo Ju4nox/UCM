@@ -199,6 +199,12 @@
         <mxCell id="eQmwyzFiXlrQ7T_pg-14-3" value="Se elimina el pedido debido a que de por si la&amp;nbsp;&lt;div&gt;cabecera y el cuerpo dan a entender que es un pedido&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
           <mxGeometry x="290" y="40" width="290" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="eQmwyzFiXlrQ7T_pg-14-4" value="No se agrega fábricas alternativas como entidad&amp;nbsp;&lt;div&gt;debido a que es redundante, por lo tanto, queda como atributo&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-215" y="-430" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eQmwyzFiXlrQ7T_pg-14-5" value="Se elimina la relación de compra&amp;nbsp;&lt;div&gt;ya que el cliente no tiene relación directa con el pedido&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-400" y="-40" width="290" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
