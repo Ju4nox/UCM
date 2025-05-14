@@ -19,6 +19,11 @@
         <mxCell id="VpPktn_9_N1O_X3OVo_U-38" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startFill=0;endArrow=none;" parent="1" source="VpPktn_9_N1O_X3OVo_U-4" target="VpPktn_9_N1O_X3OVo_U-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="-Kfz2y2jGNUMHUx99Wrb-12" value="(1,n)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VpPktn_9_N1O_X3OVo_U-38">
+          <mxGeometry x="-0.125" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="VpPktn_9_N1O_X3OVo_U-4" value="Participa" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry y="405" width="120" height="60" as="geometry" />
         </mxCell>
@@ -155,6 +160,11 @@
         <mxCell id="VpPktn_9_N1O_X3OVo_U-37" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startFill=0;endArrow=none;" parent="1" source="VpPktn_9_N1O_X3OVo_U-21" target="VpPktn_9_N1O_X3OVo_U-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="-Kfz2y2jGNUMHUx99Wrb-11" value="(1,n)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VpPktn_9_N1O_X3OVo_U-37">
+          <mxGeometry x="0.1143" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="VpPktn_9_N1O_X3OVo_U-50" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startFill=0;endArrow=none;" parent="1" source="VpPktn_9_N1O_X3OVo_U-21" target="VpPktn_9_N1O_X3OVo_U-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -186,6 +196,9 @@
         </mxCell>
         <mxCell id="VpPktn_9_N1O_X3OVo_U-51" value="Supuesto 1:&amp;nbsp;tener en cuenta el juego del que proviene cada personaje,&lt;div&gt;&amp;nbsp;de forma que este&lt;br/&gt;puede ser de un juego o aparecer en varios.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
           <mxGeometry x="180" y="205" width="370" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-Kfz2y2jGNUMHUx99Wrb-13" value="(N,M)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="35" y="375" width="50" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
