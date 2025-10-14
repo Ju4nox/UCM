@@ -1,3 +1,11 @@
-#1) Necesito leer un número real, ¿Cómo lo solicito al usuario?
-real_number=float(input("Ingrese un numero cualquiera: "))
-print(real_number)
+print("Lista 1")
+print("[12, 6, 10]")
+
+print("Lista 2")
+print("[18, 14, 27]")
+
+print("Lista 3")
+print("[53, 49, 46]")
+
+print("Lista 4")
+print("[72, 89, 70]")
